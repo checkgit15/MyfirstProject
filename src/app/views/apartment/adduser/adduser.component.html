@@ -1,0 +1,73 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()"novalidate>
+   <div class="mb-3">
+       <label>UserID</label><br>
+       <input type="text" formControlName="userid" class="form-control"required [(ngModel)]="userid" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+   </div>
+
+   <div class="mb-3">
+       <label>Name</label><br>
+       <input type="text" formControlName="name" class="form-control"required [(ngModel)]="name" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+   </div>
+
+   <div class="mb-3">
+       <label>Email</label><br>
+       <input type="text" formControlName="email" class="form-control"required [(ngModel)]="email" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+   </div>
+
+   <div class="mb-3">
+    <label>Block</label><br>
+    <input type="text" formControlName="block" class="form-control"required [(ngModel)]="block" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+</div>
+
+<div class="mb-3">
+    <label>Flat</label><br>
+    <input type="text"  formControlName="flat" (change)="changeFlat($event)" class="form-control"required [(ngModel)]="flat" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+
+</div>
+<!-- value="{{flat}}" -->
+
+<div class="mb-3">
+    <label>Role</label><br>
+    <input type="text" formControlName="role" class="form-control"required [(ngModel)]="role" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;"/>
+</div>
+
+   <!-- <div class="mb-8">
+      <button type="submit" class="btn btn-primary">UpDate</button>
+  &nbsp; -->
+  <button type="button"  (click)= "addUsers()" >ADD</button> &nbsp;
+      <button type="reset" class="btn btn-primary">Reset</button> &nbsp;
+      <button type="button" class="" [routerLink]="['/apartment/user-details/']" >Back</button> &nbsp;
+      <button type="submit"  class="btn btn-primary">UpDate</button>
+<!-- <button >Delete</button> &nbsp;   -->
+
+   <!-- </div> -->
+   
+   <!-- <button  (click)= "addUsers()" >ADD</button> &nbsp; -->
+   <!-- <button type="submit" class="btn btn-primary">UpDate</button> -->
+   </form>
+
+
+<!-- <button class="" [routerLink]="['/apartment/user-details/']" >Back</button> &nbsp;
+<button  (click)="onSubmit()">Update</button> &nbsp;
+<button >Delete</button> &nbsp;   -->
+
+<!-- <div class="row">
+    <div class="col-md-4"> 
+        <div class="form-floating mb-3">
+          <input  type="text" id="userid" placeholder="userid" [(ngModel)]="userid"/><br><br>
+         </div>  
+
+         <div class="form-floating mb-3">
+           <input  placeholder="name" type="text" id="name" [(ngModel)]="name"/><br><br>
+         </div>
+
+          <div class="form-floating mb-3">
+             <input  placeholder="email" type="text" id="email" [(ngModel)]="email"/><br><br>
+          </div>
+
+<button  (click)= "addUsers()" >ADD</button> &nbsp;
+<button class="" [routerLink]="['/apartment/user-details/']" >Back</button> &nbsp;
+<button>Update</button> &nbsp;
+<button  (click)= "addUsers()" >Delete</button> &nbsp;
+</div>  
+</div>  -->

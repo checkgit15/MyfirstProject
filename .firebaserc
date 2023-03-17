@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aptmms-e6514": {
+      "hosting": {
+        "coreui-free-angular-admin-template": [
+          "aptmms-e6514"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aptmms-e6514"
+  }
+}

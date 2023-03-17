@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+  </head>
+  <body><br>
+    <br>
+
+    <h3>Invoice -2022</h3>
+
+   <br>
+  <table class="table table-hover table-bordered"> 
+
+
+      <tr>
+    
+    <th><h5>Name</h5></th>
+    <th><h5>Action</h5></th>
+
+    <br>
+      </tr>
+      
+
+      <!-- {{monthname}} -->
+       <tr *ngFor="let user of users| orderBy:name;let i=index ">
+        <td>{{user.invoice.name}}</td>
+        <button [routerLink]="['/apartment/view-invoice/'+user.id]">ViewInvoice</button>
+        <td><a class="" [routerLink]="['/apartment/update-invoice/'+user.id]">
+          
+       Click for Statement</a></td>
+    </tr>
+   
+    </table>
+    <div class="container">
+                        
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- given by arun -->
+
+<!-- <table  *ngIf="showTable" class="table table-primary ">
+    <tr>
+        <th>Sq NO</th>
+        <th>Owner name</th>
+        <th>Flat NO</th>
+        <th>Rent Paid</th>
+        <th>Amount</th>
+        <th>edit</th>
+        <th> Update</th>
+    </tr>
+    <tr *ngFor="let d of invoice_list;let i=index">
+        <td>{{i+1}}</td>
+        <td> {{d.owner_name}}</td>
+        <td> {{d.houseNo}}</td>
+        <td *ngIf="d.rent_Paid;else noPayment">paid </td>
+        <ng-template #noPayment>
+            Un Paid
+        </ng-template>
+        <td> {{d.rent_amount}}</td>
+        <td> <button class="btn btn-primary" (click)="getDetails(i,d.owner_name)"> edit</button></td>
+        <td><button class="btn btn-secondary" (click)="update_details(i)"> update</button></td>
+    </tr>
+ </table>
+<app-update-invoice *ngIf="!showTable" [invoice]="selectInvoice" ></app-update-invoice>    -->

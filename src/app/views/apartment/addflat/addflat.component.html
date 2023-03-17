@@ -1,0 +1,47 @@
+<p>addflat works!</p>
+
+<form [formGroup]="flatForm" (ngSubmit)="onSubmit()"novalidate>
+      
+    <div class="mb-3">
+        <label>Name</label><br>
+        <input type="text" formControlName="name" class="form-control" id="name" name="block" required [(ngModel)]="name"/>
+    </div>
+ 
+    <div class="mb-3">
+     <label>Block</label><br>
+     <input type="text" formControlName="block" class="form-control"required [(ngModel)]="block"/>
+ </div>
+ 
+ <div class="mb-3">
+     <label>Flat</label><br>
+     <input type="text" (change)="changeFlat($event)" formControlName="flat" class="form-control"required [(ngModel)]="flat"/> </div>
+
+ 
+ <div class="mb-3">
+    <label>Status</label><br>
+    <input type="text" formControlName="status" class="form-control"required [(ngModel)]="status"/>
+</div>
+
+ 
+ <div class="mb-3">
+     <label>Sqft</label><br>
+     <input type="text" formControlName="sqft" class="form-control"required [(ngModel)]="sqft"/>
+ </div>
+ <div class="mb-3">
+     
+ <label>Parkinglot</label><br>
+ <input type="text" formControlName="parkinglot" class="form-control"required [(ngModel)]="parkinglot"/>
+</div>
+
+ 
+    <!-- <div class="mb-8">
+       <button type="submit" class="btn btn-primary">UpDate</button>
+   &nbsp; -->
+   <button type="button" (click)= "addFlat()" >ADD</button> &nbsp;
+       <button type="reset" class="btn btn-primary">Reset</button> &nbsp;
+       <button type="button" class="" [routerLink]="['/apartment/flatlist/']" >Back</button> &nbsp;
+       <button type="submit"  class="btn btn-primary">UpDate</button>
+   </form>
+ 
+ 
+ 

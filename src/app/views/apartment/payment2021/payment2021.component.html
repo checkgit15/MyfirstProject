@@ -1,0 +1,45 @@
+<p>payment2021 works!</p>
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+  </head>
+  <body><br>
+    <br>
+
+    <h3>Payments -2021</h3>
+
+   <br>
+  <table class="table table-hover table-bordered"> 
+
+
+      <tr>
+    
+    <th><h5>Month</h5></th>
+    <br>
+      </tr>
+      
+       <tr *ngFor="let user of users;let i=index ">
+        <td><a class="" [routerLink]="['/apartment/paylist2021/'+user.id]">
+          
+        {{user.month.monthname}}</a></td>
+
+       
+
+    </tr>
+   
+    </table>
+    <div class="container">
+                        
+        <br>
+
+             
+  
+      </div> 
+  </body>
+</html>

@@ -1,0 +1,38 @@
+
+
+<table class="table table-hover table-bordered"> 
+<tr>
+   <th>S.No</th>
+   <th>Tenant</th>
+   <th>Due Amount</th>
+   <!-- <th>UserId</th> -->
+   
+   <th>ACTION</th>
+   <th>Upload</th>
+   </tr>
+  
+
+   <tr *ngFor="let user of paymentdata;let i=index ">
+       <!-- <td>{{user.userid}}</td> -->
+       <td>{{i+1}}</td>
+   
+       <td>{{user.due}}</td> 
+       
+       <td> <a  class="" [routerLink]="['/apartment/imageview/'+user.id ]">Details</a></td>
+       <td> <input type="file" (change)="upload($event)" accept=".png,.jpg"/></td>
+       <td><button (click)="uploadImage()">UploadImage</button></td>
+        
+         
+      <img src="" alt="" id="imag">    </tr>
+ <!-- <div *ngIf="downloadURL | async; let url" class="alret alret-info" role="alret">
+           <img [src]="url" >download
+         </div>  -->
+         <!-- <div *ngFor="let image of images | async">
+          <a>
+            <img src="{{image.url}}">
+          </a>
+         </div> -->
+
+     
+
+          <!-- <img src="https://firebasestorage.googleapis.com/v0/b/aptmms-e6514.appspot.com/o/files0.02797276454936437%5Bobject%20File%5D?alt=media&token=c69379b2-312d-49c2-943f-2e32015c39ba" alt="" height="200" width="200"/>  -->

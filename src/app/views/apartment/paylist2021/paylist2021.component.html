@@ -1,0 +1,75 @@
+
+<h2>{{items.month.monthname}}</h2> 
+
+<table class="content-table" width="50px" border="1px">  
+
+<thead>
+ 
+    
+  <tr>
+       <th>Name</th>
+       <th>Debit</th>
+       <th>Credit</th> 
+       <th>Balance</th>   
+       
+       </tr>
+      </thead>
+
+   <tbody>
+
+   <tr>
+  <td> {{items.month.user1.name}}</td>
+  <td> {{items.month.user1.balance}}</td>
+  <td> {{items.month.user1.due}}</td>
+
+</tr>
+
+<tr>
+  <td> {{items.month.user2.name}}</td>
+  <td> {{items.month.user2.balance}}</td>
+  <td> {{items.month.user2.due}}</td>
+
+</tr>
+
+<tr>
+  <td> {{items.month.user3.name}}</td>
+  <td> {{items.month.user3.balance}}</td>
+  <td> {{items.month.user3.due}}</td>
+
+</tr>
+
+
+
+
+         
+
+          
+        
+      
+<!-- 
+        <td>
+          <tr>{{items.month.user1.due + items.month.user1.balance}}</tr>
+          <tr>{{items.month.user2.due + items.month.user2.balance}}</tr>
+          <tr>{{items.month.user3.due + items.month.user3.balance}}</tr>
+
+          <tr> {{items.month.user1.due + items.month.user1.balance+
+            items.month.user2.due + items.month.user2.balance+
+            items.month.user3.due + items.month.user3.balance}}
+         </tr>
+
+                   
+            </td> -->
+
+
+            
+
+          </tbody>               
+ </table>
+
+
+
+
+ <button class="" [routerLink]="['/apartment/payment2021/']" >Back</button> &nbsp; 
+
+
+ 

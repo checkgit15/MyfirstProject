@@ -1,0 +1,39 @@
+export interface pay2021
+    {
+    id:string;
+    
+    
+    month:{
+        monthname:string;
+       user1:{
+        name:string;
+        balance:number;
+        due:number;
+        date:string;
+         },
+    user2:{
+    balance:number;
+    due:number;
+    name:string;
+    date:string;
+},
+user3:{
+    balance:number;
+    due:number;
+    name:string;
+    date:string;
+},
+user4:{
+    balance:number;
+    due:number;
+    name:string;
+    date:string;
+},
+user5:{
+    balance:number;
+    due:number;
+    name:string;
+    date:string;
+}
+    }
+   }

@@ -1,0 +1,329 @@
+
+<html>
+ <h3>User:{{items.invoice.name}}</h3> &nbsp;
+ <h3>{{items.invoice.flat}}</h3>
+<div class="alert alert-warning" style="width:300px;height:50px;"> 
+<tr [ngSwitch]="dueamount">
+  <td>Your Outstanding Due:</td>
+  <td *ngSwitchCase=0>NIL</td>
+  <td *ngSwitchCase=1>{{items.invoice.outstandingdue}}<td>
+  </tr>
+</div>
+
+
+
+<table class="table table-hover table-bordered "   width="50px">   
+
+<thead>
+     
+  <tr>
+     <th> Invoice No.</th>   
+       <th scope="col"(click)="sort('date')">Invoice Date <i class="fa fa-sort"></i></th>
+       <th>Maintenance Fee</th>
+       <th>Credit</th>
+       <th>Status</th>  
+       <!-- <th>Balance</th> -->
+       <th>Bill</th>
+       
+      </thead>
+
+   <tbody>
+
+<tr >
+  <td>{{items.invoice.january.invoicenum}}</td> 
+  <td> {{items.invoice.january.date}}</td>
+  
+  <td>{{items.invoice.january.amount}}</td>
+  <td>{{items.invoice.january.credit}}</td>
+  <td>{{items.invoice.january.status}}</td>
+  <td>
+    <a class="fa fa-user icon text-success" [routerLink]="['/apartment/view-invoice/']"
+    *ngIf="items.invoice.january.status=='Paid'">Receipt</a> 
+    <i class="fa  icon text-danger"
+    *ngIf="items.invoice.january.status=='Unpaid'">---</i> 
+    </td>
+  <!-- <td>{{items.invoice.january.credit-items.invoice.january.amount}} </td> -->
+
+</tr>
+
+<tr>
+  <td>{{items.invoice.february.invoicenum}}</td> 
+  <td> {{items.invoice.february.date}}</td>
+
+  
+  <td>{{items.invoice.february.amount}}</td>
+  <td>{{items.invoice.february.credit}}</td>
+  <td>{{items.invoice.february.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.february.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.february.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.february.credit-items.invoice.february.amount-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr  >
+  <td>{{items.invoice.march.invoicenum}}</td> 
+  <td> {{items.invoice.march.date}}</td>
+  
+  <td>{{items.invoice.march.amount}}</td>
+  <td>{{items.invoice.march.credit}}</td>
+  <td>{{items.invoice.march.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.march.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.march.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.march.credit-items.invoice.march.amount-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr >
+  <td>{{items.invoice.april.invoicenum}}</td> 
+  <td> {{items.invoice.april.date}}</td>
+  
+  <td>{{items.invoice.april.amount}}</td>
+  <td>{{items.invoice.april.credit}}</td>
+  <td>{{items.invoice.april.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.april.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.april.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.april.credit-items.invoice.april.amount-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.may.invoicenum}}</td> 
+  <td> {{items.invoice.may.date}}</td>
+
+  
+  <td>{{items.invoice.may.amount}}</td>
+  <td>{{items.invoice.may.credit}}</td>
+  <td>{{items.invoice.may.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.may.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.may.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.may.credit-items.invoice.may.amount-items.invoice.april.balance-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.june.invoicenum}}</td> 
+  <td> {{items.invoice.june.date}}</td>
+
+ 
+  <td>{{items.invoice.june.amount}}</td>
+  <td>{{items.invoice.june.credit}}</td>
+  <td>{{items.invoice.june.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.june.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.june.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.june.credit-items.invoice.june.amount-items.invoice.may.balance-items.invoice.april.balance-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.july.invoicenum}}</td> 
+  <td> {{items.invoice.july.date}}</td>
+
+  
+  <td>{{items.invoice.july.amount}}</td>
+  <td>{{items.invoice.july.credit}}</td>
+  <td>{{items.invoice.july.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.july.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.july.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.july.credit-items.invoice.july.amount-(items.invoice.june.balance+
+        items.invoice.may.balance+items.invoice.april.balance+items.invoice.march.balance+items.invoice.february.balance+items.invoice.january.balance)}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.august.invoicenum}}</td> 
+  <td> {{items.invoice.august.date}}</td>
+
+ 
+  <td>{{items.invoice.august.amount}}</td>
+  <td>{{items.invoice.august.credit}}</td>
+  <td>{{items.invoice.august.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.august.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.august.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.august.credit-items.invoice.august.amount-(items.invoice.july.amount+items.invoice.june.balance+
+        items.invoice.may.balance+items.invoice.april.balance+items.invoice.march.balance+items.invoice.february.balance+items.invoice.january.balance)}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.september.invoicenum}}</td> 
+  <td> {{items.invoice.september.date}}</td>
+ 
+  <td>{{items.invoice.september.amount}}</td>
+  <td>{{items.invoice.september.credit}}</td>
+  <td>{{items.invoice.september.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.september.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.september.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.september.credit-items.invoice.september.amount-items.invoice.august.balance-items.invoice.july.balance-items.invoice.june.balance
+    -items.invoice.may.balance-items.invoice.april.balance-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.october.invoicenum}}</td> 
+  <td> {{items.invoice.october.date}}</td>
+  
+  <td>{{items.invoice.october.amount}}</td>
+  <td>{{items.invoice.october.credit}}</td>
+  <td>{{items.invoice.october.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.october.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.october.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.october.credit-items.invoice.october.amount-items.invoice.september.balance-items.invoice.august.balance-items.invoice.july.balance-items.invoice.june.balance
+    -items.invoice.may.balance-items.invoice.april.balance-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.november.invoicenum}}</td> 
+  <td> {{items.invoice.november.date}}</td>
+ 
+  <td>{{items.invoice.november.amount}}</td>
+  <td>{{items.invoice.november.credit}}</td>
+  <td>{{items.invoice.november.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.november.status=='Paid'">Receipt</i> 
+    <i class="fa fa-user icon text-danger"
+    *ngIf="items.invoice.november.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.november.credit-items.invoice.november.amount-items.invoice.october.balance-items.invoice.september.balance-items.invoice.august.balance-items.invoice.july.balance-items.invoice.june.balance
+    -items.invoice.may.balance-items.invoice.april.balance-items.invoice.march.balance-items.invoice.february.balance-items.invoice.january.balance}}</td> -->
+</tr>
+
+<tr>
+  <td>{{items.invoice.december.invoicenum}}</td> 
+  <td> {{items.invoice.december.date}}</td>
+  
+  <td>{{items.invoice.december.amount}}</td>
+  <td>{{items.invoice.december.credit}}</td>
+  <td>{{items.invoice.december.status}}</td>
+  <td>
+    <i class="fa fa-user icon text-success"
+    *ngIf="items.invoice.december.status=='Paid'">Receipt</i> 
+    <i class="fa text-danger"
+    *ngIf="items.invoice.december.status=='Unpaid'">-</i> 
+    </td>
+  <!-- <td>{{items.invoice.december.credit-items.invoice.december.amount-(items.invoice.november.balance+items.invoice.october.balance
+       +items.invoice.september.balance+items.invoice.august.balance+items.invoice.july.balance+items.invoice.june.balance
+       +items.invoice.may.balance+items.invoice.april.balance+items.invoice.march.balance+items.invoice.february.balance+items.invoice.january.balance)}}</td> -->
+</tr> 
+<!-- 
+ <td>
+  
+  <tr>{{items.invoice.january.invoicenum}}</tr>
+<tr>{{items.invoice.february.invoicenum}}</tr>
+<tr>{{items.invoice.march.invoicenum}}</tr>
+<tr>{{items.invoice.april.invoicenum}}</tr>
+<tr> {{items.invoice.may.invoicenum}}</tr>
+<tr>{{items.invoice.june.invoicenum}}</tr>
+<tr>{{items.invoice.july.invoicenum}}</tr>
+<tr>{{items.invoice.august.invoicenum}}</tr>
+<tr>{{items.invoice.september.invoicenum}}</tr>
+<tr>{{items.invoice.october.invoicenum}}</tr>
+<tr>{{items.invoice.november.invoicenum}}</tr>
+<tr>{{items.invoice.december.invoicenum}}</tr>
+  </td>
+
+    <td >
+ 
+      
+<tr>{{items.invoice.february.date}}</tr>
+<tr>{{items.invoice.march.date}}</tr>
+<tr>{{items.invoice.april.date}}</tr>
+<tr> {{items.invoice.may.date}}</tr>
+<tr>{{items.invoice.june.date}}</tr>
+<tr>{{items.invoice.july.date}}</tr>
+<tr>{{items.invoice.august.date}}</tr>
+<tr> {{items.invoice.september.date}}</tr>
+<tr>{{items.invoice.october.date}}</tr>
+<tr>{{items.invoice.november.date}}</tr>
+<tr>{{items.invoice.december.date}}</tr>
+  </td>
+
+
+  <td> <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+    <tr>{{items.invoice.flat}}</tr>
+  </td>
+     <td>
+        <tr>{{items.invoice.january.amount}}</tr>
+      <tr>  {{items.invoice.february.amount}}</tr>
+      <tr>{{items.invoice.march.amount}}</tr>
+      <tr>{{items.invoice.april.amount}}</tr>
+      <tr>{{items.invoice.may.amount}}</tr>
+      <tr>  {{items.invoice.june.amount}}</tr>
+      <tr>{{items.invoice.july.amount}}</tr>
+      <tr>{{items.invoice.august.amount}}</tr>
+      <tr>{{items.invoice.september.amount}}</tr>
+      <tr>  {{items.invoice.october.amount}}</tr>
+      <tr>{{items.invoice.november.amount}}</tr>
+      <tr>{{items.invoice.december.amount}}</tr>
+        </td>
+
+
+        <td>
+          <tr>{{items.invoice.january.status}}</tr>
+        <tr>  {{items.invoice.february.status}}</tr>
+        <tr>{{items.invoice.march.status}}</tr>
+        <tr>{{items.invoice.april.status}}</tr>
+        <tr>{{items.invoice.may.status}}</tr>
+        <tr>  {{items.invoice.june.status}}</tr>
+        <tr>{{items.invoice.july.status}}</tr>
+        <tr>{{items.invoice.august.status}}</tr>
+        <tr>{{items.invoice.september.status}}</tr>
+        <tr>  {{items.invoice.october.status}}</tr>
+        <tr>{{items.invoice.november.status}}</tr>
+        <tr>{{items.invoice.december.status}}</tr>
+          </td> 
+
+        -->
+
+                                   
+          </tbody>   
+         
+
+
+ 
+          </table>
+          
+         
+        
+
+
+  <button class="" [routerLink]="['/apartment/invoice-list']" >Back</button> &nbsp;  
+ </html>

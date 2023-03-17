@@ -1,0 +1,80 @@
+
+ <h1>Payments with stripe</h1><br><br>
+
+ <button type="button" *ngIf="stripeStatus!=''"(click)=reloadHome()></button>
+<div *ngFor ="let pay of payments">
+ <button type="button" *ngIf="stripeStatus!=''"(click)=checkoutFirebase(pay.id)></button></div>
+
+ <!-- <table class="table table-hover table-bordered"> 
+ <tr>
+    <th>S.No</th>
+    <th>Month</th>
+    
+    
+    </tr>
+   
+
+    <tr *ngFor="let due of paymentdata "> 
+        
+      
+    
+       
+        <tr> <a  class="" [routerLink]="['/apartment/payment-details/' ]">Jan</a></tr>
+        <tr><a [routerLink]="['/apartment/payment-details/']">Feb</a></tr>
+        <tr><a [routerLink]="['/apartment/payment-details/']">Mar</a></tr>
+        <tr><a [routerLink]="['/apartment/payment-details/']">Apr</a></tr>
+        <tr><a [routerLink]="['/apartment/payment-details/']">May</a></tr>
+        <tr><a [routerLink]="['/apartment/payment-details/']">June</a></tr>
+     </table> -->
+
+
+
+        <!-- <td> <input type="file" (change)="upload($event)" accept=".png,.jpg"/></td>
+        <td><button (click)="uploadImage()">UploadImage</button></td>
+         
+         <td><button (click)="downloadImage()">DownloadImage</button></td> 
+        </tr>
+
+<div *ngIf="downloadURL | async; let downloadSrc" class="alret alret-info" role="alret">
+            <a [href]="downloadSrc">{{downloadSrc}}</a>
+          </div> -->
+<!-- <div class="card-body">
+ <table class="table table-hover table-bordered">
+<thead>
+ <tr>
+    <th>Tenant</th>
+    <th>Email</th>
+    <th>Due Amount</th>
+    <th>ACTION</th>
+    </tr>
+</thead>
+
+<tbody>
+     <tr> 
+      <td>                      
+          <select formControlName="name">
+           <option value="" disabled>Select name</option>
+           <option *ngFor="let user of Tenantinfo;index as i" ngValue="name ">{{user.name}}</option>
+           </select>
+      </td>  
+
+     <td>
+         <select >
+         <option value="" disabled>FlatNum</option>
+         <option *ngFor="let user of Tenantinfo;index as i" ngValue="flat ">{{user.email}}</option>
+         </select> 
+    </td>
+                 
+        <td><input  type="text" #name1></td>     
+
+           <td><input [(ngModel)]="namedata"></td>                -->
+       <!-- <td> 
+        <a href="#" (click)="passValue(name1)" class="btn btn-primary" routerLink='/apartment/payment-details' style="color: blue">Pay</a></td> 
+         <a  (click)="onaddUser()" class="btn btn-warning" routerLink='/apartment/payment-details' style="color: blue">Pay</a></td>  -->
+    <!-- </tr>
+
+</tbody>
+
+</div> 
+ <app-payment-details [namedata]="inputname "></app-payment-details>
+<app-payment-details *ngFor="let user of userList" [user]="user "></app-payment-details>  -->

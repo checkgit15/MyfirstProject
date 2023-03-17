@@ -1,0 +1,92 @@
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+  </head>
+  <body><br>
+    <br>
+
+    <h3>Payments -2022</h3>
+
+   <br>
+  <table class="table table-hover table-bordered"> 
+
+
+      <tr>
+    
+    <th><h5>Month</h5></th>
+    <br>
+      </tr>
+      
+
+      <!-- {{monthname}} -->
+       <tr *ngFor="let user of users;let i=index ">
+        <td><a class="" [routerLink]="['/apartment/paymentlist/'+user.id]">
+          
+        {{user.month.monthname}}</a></td>
+    </tr>
+   
+    </table>
+    <div class="container">
+                        
+        <br>
+
+             
+  
+
+        <!-- <button (click)="onClick('buttonclick')">Checkout</button> -->
+<!-- <button id="checkout-button"></button> -->
+
+<!-- <p id="demo"></p>     -->
+        <!-- <button type="button" class="pay-now-btn">
+           Pay with Netbanking
+        </button> 
+        <br>
+        <button type="button" class="pay-now-btn">
+            Card Payment
+         </button> 
+   -->
+       
+  
+      <!-- <div class="card-details">
+        <p>Pay using Credit or Debit card</p>
+  
+        <div class="card-number">
+          <label> Card Number </label>
+          <input
+            type="text"
+            class="card-number-field"
+            placeholder="###-###-###"/>
+        </div>
+        <br />
+        <div class="date-number">
+          <label> Expiry Date </label>
+          <input type="text" class="date-number-field" 
+                 placeholder="DD-MM-YY" />
+        </div>
+  
+        <div class="cvv-number">
+          <label> CVV number </label>
+          <input type="text" class="cvv-number-field" 
+                 placeholder="xxx" />
+        </div>
+        <div class="nameholder-number">
+          <label> Card Holder name </label>
+          <input
+            type="text"
+            class="card-name-field"
+            placeholder="Enter your Name"/>
+        </div>
+        <button type="submit" 
+                class="submit-now-btn">
+          submit
+        </button>
+      </div> -->
+      </div> 
+  </body>
+</html>

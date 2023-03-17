@@ -1,0 +1,57 @@
+export interface payinfo
+    {
+    
+    id:string;
+    
+    
+    month:{
+        monthname:string;
+       user1:{
+        name:string;
+        balance:number;
+        due:number;
+        credit:number;
+        paid_date:string;
+        flatname:string;
+        invoicedate:string;
+        invoicenum:number;
+         },
+    user2:{
+    balance:number;
+    due:number;
+    name:string;
+    credit:number;
+    paid_date:string;
+    invoicedate:string;
+    invoicenum:number;
+},
+user3:{
+    balance:number;
+    due:number;
+    name:string;
+    credit:number;
+    paid_date:string;
+    invoicedate:string;
+        invoicenum:number;
+},
+user4:{
+    balance:number;
+    due:number;
+    name:string;
+    credit:number;
+    paid_date:string;
+    invoicedate:string;
+        invoicenum:number;
+},
+user5:{
+    balance:number;
+    due:number;
+    name:string;
+    credit:number;
+    paid_date:string;
+    flatname:string;
+    invoicedate:string;
+        invoicenum:number;
+}
+    }
+   }

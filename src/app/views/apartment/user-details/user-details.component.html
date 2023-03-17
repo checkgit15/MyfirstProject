@@ -1,0 +1,109 @@
+
+
+<!-- <div class="alert alert-warning"></div> -->
+<!-- <div class="alert alert-warning"></div> -->
+<!-- <div class="btn-group" role="group" >
+  <label class="btn btn-light align-left btn-default-no-action" style="width: 240px;font-weight:bold; background-color:rgb(141, 141, 118)">
+    <span class="text-black">Rs <span id="total_pending_charge_amount">400.00</span></span><br> TOTAL PENDING DUES
+  </label>
+    </div> -->
+
+
+    <td style="float:right;"><button class="btn btn-info btn-sm text-center" routerLink="/apartment/adduser">NewUser</button>&nbsp;
+    </td>
+ 
+<input class="form-control" type="text" placeholder="Search" [(ngModel)]="searchText" style="width:450px;padding:2px 20px;margin:10px 0px;height:30px;">
+
+<table class="table table-hover table-bordered " width="50px"> 
+  <thead>
+  <tr>
+  <th>S.No</th>
+    <th scope="col"(click)="sort('name')">Name <i class="fa fa-sort"></i></th>&nbsp;
+    <th>USERId </th> &nbsp;&nbsp;
+    <th>Flat</th>&nbsp;&nbsp;
+    <th>Role</th>&nbsp;&nbsp;
+    <th>ACTION</th> 
+    <th>UPDATE</th>
+    <th>DELETE</th>
+    <th>SELECTIMAGE</th>
+    <th>UPLOAD</th>
+    <th>DELETEIMAGE</th>
+    </tr>
+  </thead>
+<tbody>
+  <!-- <tr *ngFor="let e of users | search: searchText">
+    <td>{{e.name}}</td>
+    <td>{{e.userid}}</td>
+  </tr> -->
+  <i class="cis-settings"></i>
+
+  <!-- <tr *ngFor="let user of users | searching : searchText;let i=index "> -->
+   <tr  *ngFor="let user of users| searching :searchText | orderBy :'name':reverse; let i=index ">
+    
+    <!-- <td>{{user.userid}}</td> -->
+    <td>{{i+1}}</td>
+  <!--  <td>{{user.userid}}</td> -->
+    <td>{{user.name}}</td>&nbsp;
+    <td>{{user.userid}}</td>&nbsp;
+    <td>{{user.flat}}</td>&nbsp;
+    <td>{{user.role}}</td>&nbsp;
+    <td> <a  class="" [routerLink]="['/apartment/detailsofuser/'+user.id  ]" >Details</a></td>
+  <!-- <td> <button class="btn btn-outline-warning" [routerLink]="['/apartment/adduser/']">Update</button></td>  -->
+
+  <td><button type="submit" class="btn btn-outline-warning btn-sm" routerLink="/apartment/adduser/{{user.id}}">Update</button></td> 
+  
+  
+  <td> <button class="btn btn-outline-danger btn-sm" (click)="deleteUser(user)">Delete</button></td> 
+ <td [width]="0"> <input type="file" (change)="upload($event)" accept=".png,.jpg"/></td>
+ <td [width]="0"><button (click)="uploadImage(user)">Upload</button></td>
+  <td><button class="btn-sm" (click)="deleteImage(user)">DeleteImage</button></td>
+  <!-- <td><button (click)="addToFirebase(user,user.id)">Upload</button></td> -->
+       </tr>
+      </tbody>
+</table>
+
+<!-- <div class="alert alert-warning"></div> -->
+
+<!-- 
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav> -->
+
+
+
+<!-- <img src="https://firebasestorage.googleapis.com/v0/b/aptmms-e6514.appspot.com/o/folder_name%2Fsachin.jpg?alt=media&token=ddec498e-e8ee-49cc-9a46-33ff699779f3" alt="" height="200" width="200"/> -->
+<!-- <table class="table table-hover table-bordered"> -->
+      <!-- <tr id="bgcolor"> -->
+        <!-- <tr>
+        <th>NAME</th>
+        <th>EmailId</th> -->
+        <!-- <th>Block</th> -->
+        <!-- <th id="urflat">Flat No</th>  -->
+        <!-- <th>ID_Proof</th>
+        <th>Role</th> -->
+       
+    <!-- </tr><br>
+
+    <tr *ngFor="let use of Tenantinfo">
+
+      <td> <a  class="" [routerLink]="['/apartment/detailsofuser/' + use.name]"
+        (click)="updateUser(use)" style="color: blue">{{use.name}}</a></td>
+     <td>{{use.Email_Id}}</td> -->
+    <!-- <td>{{use.Block}}</td> -->
+     <!-- <td>{{use.flat}}</td>  -->
+   <!-- <td>{{use.ID_Proof}}</td> -->
+   <!-- <td>{{use.Role}}</td> -->
+   <!-- <td>{{use.Reg_Date}}</td> -->
+   
+   <!-- <td> <a routerLink="edit">Edit</a></td> -->
+   <!-- </tr>
+   <br>
+         
+</table> -->
+<!--<app-detailsofuser [getvalue]="profile "></app-detailsofuser> -->

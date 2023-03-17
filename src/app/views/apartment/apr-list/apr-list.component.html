@@ -1,0 +1,50 @@
+<button (click)="go()" style="background-color: rgb(172, 121, 219);"> Individual Flat Details</button>
+<br>
+
+
+ <!-- <app-charts> </app-charts> -->
+<!-- <router-outlet></router-outlet> -->
+ 
+<h2>2021-JANUARY</h2>
+<c-col xs="12" lg="6">
+  <c-card class="mb-4"> 
+     <!-- <c-card-header>
+       
+    </c-card-header> -->
+    <c-card-body> 
+      <c-chart [data]="data1" type="bar"></c-chart>
+
+     </c-card-body>
+  </c-card>
+</c-col> 
+
+
+
+
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4"> 
+         <!-- <c-card-header>
+           
+        </c-card-header> -->
+        <c-card-body> 
+          <c-chart type="bar" [data]="electricity"></c-chart>
+         </c-card-body>
+      </c-card>
+    </c-col> 
+
+     <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <!-- <c-card-header> 
+          
+         </c-card-header> -->
+        <c-card-body> 
+          <c-chart type="bar" [data]="monthly"></c-chart>
+         
+      </c-card-body>
+      </c-card>
+    </c-col> 
+
+      
+
+      
+      

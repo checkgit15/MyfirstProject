@@ -1,0 +1,47 @@
+ <p>phonenumber works!</p>
+ 
+<c-container>
+      <c-row class="justify-content-center">
+        <c-col md="8">
+          <c-card-group>
+            <c-card class="p-4">
+              <c-card-body>
+
+                <form cForm>
+                  <h2>Login with OTP</h2>
+                  <p class="text-medium-emphasis">Enter Mobile Number</p>
+                  
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText>
+                      <svg cIcon ></svg>
+                    </span>
+  
+                    <input type="text" class="form-control" name="phoneNumber"
+                    [(ngModel)]="phoneNumber">
+                   
+                <br> <br>
+                              
+                    </c-input-group>
+
+                
+                  
+                  <c-row>
+                    <c-col xs="6">
+                 <div id="reCaptchaContainer"></div>
+                        <button type="submit"   (click)="getOtp()" class="btn btn-primary btn-block">Send Otp
+                        
+                      </button>
+                      <br> <br>
+                       </c-col>
+
+                      <c-col class="text-right" xs="6">
+                     </c-col>
+                  </c-row>
+                 
+               
+                  <div id="sign-in-button">
+                       
+               </div>
+                </form>
+  
+ 

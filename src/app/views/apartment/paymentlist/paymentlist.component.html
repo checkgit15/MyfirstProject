@@ -1,0 +1,73 @@
+<h2>{{items.month.monthname}}</h2> 
+
+<table class="table table-hover table-bordered " width="50px">  
+
+<thead>
+ 
+    
+  <tr>
+       <th>Name</th>
+       <th>Amount</th>
+       <th>Date</th>
+       <th>Credit</th> 
+       <th>Balance</th>   
+       
+       </tr>
+      </thead>
+
+   <tbody>
+    <tr>
+      <td> {{items.month.user1.name}}</td>
+      
+      <td> {{items.month.user1.due}}</td>
+      <td>Maintenance charges for <b>Flat-{{items.month.user1.flatname}}</b> paid on {{items.month.user1.paid_date}}</td>
+      <td> {{items.month.user1.credit}}</td>
+      <td>{{items.month.user1.credit-items.month.user1.due}}</td>
+    </tr>
+    
+    <tr>
+      <td> {{items.month.user2.name}}</td>
+            <td> {{items.month.user2.due}}</td>
+            <td>Maintenance charges for <b>Flat-{{items.month.user2.flatname}}</b> paid on {{items.month.user2.paid_date}}</td>
+      <td> {{items.month.user2.credit}}</td>
+      <td>{{items.month.user2.credit-items.month.user2.due}}</td>
+    </tr>
+    
+    <tr>
+      <td> {{items.month.user3.name}}</td>
+           <td> {{items.month.user3.due}}</td>
+           <td>Maintenance charges for <b>Flat-{{items.month.user3.flatname}}</b> paid on {{items.month.user3.paid_date}}</td>
+      <td> {{items.month.user3.credit}}</td>
+      <td>{{items.month.user2.credit-items.month.user2.due}}</td>
+    </tr>
+        
+     
+
+        <!-- <td>
+          <tr>{{items.month.user1.due + items.month.user1.balance}}</tr>
+          <tr>{{items.month.user2.due + items.month.user2.balance}}</tr>
+          <tr>{{items.month.user3.due + items.month.user3.balance}}</tr>
+
+          <tr> {{items.month.user1.due + items.month.user1.balance+
+            items.month.user2.due + items.month.user2.balance+
+            items.month.user3.due + items.month.user3.balance}}
+         </tr> -->
+            <!-- <tr> {{items.month.user1.balance}} + {{items.month.user1.due}}</tr> -->
+         
+            <!-- </td> -->
+
+             
+          </tbody>               
+ </table>
+
+ <button class="" [routerLink]="['/apartment/payment-details/']" >Back</button> &nbsp;
+
+ <!-- <script>
+  var table=document.getElementById("table"),sumVal=0;
+  for(var i=1;i<table.rows.lenght;i++)
+  {
+sumVal=sumVal+parseInt(table.rows[i].cells[3].innerHTML);
+
+  }
+  
+ </script> -->

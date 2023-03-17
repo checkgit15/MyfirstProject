@@ -1,0 +1,38 @@
+// #bgcolor
+// {
+// background: rgb(158, 141, 204);
+// }
+
+//  .color_green
+//  {
+//      background-color: rgb(85, 190, 85);
+//  }
+// *{
+//     border-top: 100px;
+// }
+
+table{
+    width:0%;
+    padding:0;
+    margin:0;
+   
+}
+td,th,tr{
+    padding:1;
+    width:1;
+    margin:1;
+}
+
+.table th{
+
+    background-color:rgb(197, 196, 194);
+}
+
+tbody tr:nth-of-type(even)
+{
+background-color: #f3f3f3;
+}
+
+// #change:hover{
+//     color:cornsilk;
+// }
